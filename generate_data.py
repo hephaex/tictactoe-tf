@@ -3,7 +3,6 @@ import os
 import numpy as np
 import pandas as pd
 
-
 def check_victory_condition(board, player):
     board = np.array(board)
     for i in range(3):
@@ -13,7 +12,6 @@ def check_victory_condition(board, player):
             return True
         if np.sum(board[[0, 4, 8]]) == 3*player or np.sum(board[[2, 4, 6]]) == 3*player:
             return True
-
 
 def judge(board):
     # Check which is the current player
@@ -50,7 +48,6 @@ def judge(board):
         return 0
     else:
         return -player
-
 
 if __name__ == "__main__":
     l = []
